@@ -1,0 +1,127 @@
+<style>
+
+</style>
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+        <div class="App">
+            <div class="nav-bar">
+                <div class="nav-left-aligned"><div class="logo ft-logo"></div></div>
+                <div class="nav-center-aligned"></div>
+                <div class="nav-right-aligned">
+                    <div class="user-profile">
+                        <div class="user-profile-header">
+                            <div class="user-profile-name"><span class="avatar avatar-yellow"></span>roger+demo<i class="bottom-arrow"></i></div>
+                            <div class="user-profile-menu">
+                                <div class="org">
+                                    <div>Zd-Zom</div>
+                                    <div class="sub">Admin</div>
+                                </div>
+                                <a href="/settings"><div class="setting">Settings</div></a>
+                                <div class="divider-parent"><div class="divider"></div></div>
+                                <div class="logout">
+                                    <div><a>Sign Out</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="settings">
+                <div class="tab">
+                    <div class="title">Settings</div>
+                    <div class="sub-title">
+                        <div class="logo organization"></div>
+                        <div class="heading">Organization</div>
+                    </div>
+                    <div class="sub-title active">
+                        <div class="logo sso"></div>
+                        <div class="heading">SSO Integrations</div>
+                    </div>
+                    <div class="sub-title active">
+                        <div class="logo organization"></div>
+                        <div class="heading">Routing</div>
+                        <ul>
+                            <p>Effort per Product</p>
+                            <p>Capacity per Level</p>
+                            <p>Case Re-assignment</p>
+                            <p>General</p>
+                        </ul>
+                    </div>
+                </div>
+                <div class="settings-content-container">
+                    <div class="sso-integration">
+                        <div class="modal" style="display: none;">
+                            <div class="modal-content">
+                                <div class="close-icon"></div>
+                                <div class="title">Disable SSO Provider</div>
+                                <div class="content">Are you sure you want to disable SSO for this provider? Your organization will no longer be able to sign into the Forethought dashboard with SSO.</div>
+                                <div class="button-container"><button class="close">Cancel</button><button class="ok-button">Disable Provider</button></div>
+                            </div>
+                        </div>
+                        <div class="title">SSO Integrations</div>
+                        <p class="sso-integration-content">
+                            Single Sign-On allows users using the Forethought Dashboard to be able to login through their own SSO provider without the need to have a separate username and password. You can find detailed instructions below
+                            the integration steps.
+                        </p>
+                        <div class="sso-disable-message" style="display: none;">
+                            <div class="sso-disable-message-icon"></div>
+                            <span>To reconfigure Okta, please disable the Okta integration and go through the steps to enable again.</span>
+                        </div>
+                        <div class="sso-integration-content">
+                            <div class="title">Step 1: Choose your SSO provider</div>
+                            <div class="sso-options">
+                                <div class="okta-logo"><button class="disabled">Not Enabled</button></div>
+                                <div class="one-login-logo"><button disabled="">Coming Soon</button></div>
+                            </div>
+                            <div class="title">Step 2: Enter your SAML/IdP Metadata URL</div>
+                            <div class="save-metadata">
+                                <div class="metadata"><input class="saml-input" type="url" value="" /><button class="saml-save-disabled">Save</button></div>
+                            </div>
+                            <div class="title">Step 3: Click below to go to the final set of instructions</div>
+                            <a href="#bookmark" class="saml-save">Learn how to bookmark the app</a>
+                            <div class="title">Setup Instructions</div>
+                            <ol>
+                                <li value="1">
+                                    In Okta Admin, select <b>Applications</b> then <b>Add Application</b> and search for “Forethought Dashboard”. Select <b>Add.</b>
+                                    <ol type="a">
+                                        <li>Select the Forethought app and go to the sign on tab.</li>
+                                        <li>Right click the link for Identity Provider metadata and select Copy Address from the dropdown.</li>
+                                    </ol>
+                                </li>
+                                <div class="setup-1"></div>
+                                <li>
+                                    Back in the Forethought dashboard:
+                                    <ol type="a">
+                                        <li>Paste the <b>Identity Provider metadata</b> in the <b>SAML/IdP metadata URL</b> in the input box in Step 2.</li>
+                                        <li>Select <b>Save</b>.</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    Back in the Forethought dashboard:
+                                    <ol type="a">
+                                        <li>Select <b>Hide app</b> (for users on desktop)</li>
+                                        <li>Select <b>Hide app</b> on mobile (for users on mobile)</li>
+                                        <li id="bookmark">Select <b>Add Application</b> and <b>add the Bookmark App</b>.</li>
+                                        <div class="setup-2"></div>
+                                        <div class="copy-url">
+                                            <input readonly="" class="copy-url-display" value="https://dashboard.forethought.ai/single-sign-on" />
+                                            <div class="copy-button"><div class="copy-url-copy">Copy URL</div></div>
+                                        </div>
+                                        <li>Enter your <b>Forethought dashboard url</b> in the URL input box in the Okta bookmark Add App form:</li>
+                                        <div class="setup-3"></div>
+                                        <li>(Optional) Right click and select <b>Save Image As...</b> the Forethought image for your Okta app:</li>
+                                        <img class="setup-4" src="/1e0ac793f5e0b6548419b8e76fff6c61.png" />
+                                        <li>Upload the Forethought logo image in Okta to make it easy for users to recognize.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="Footer--container"><div class="Footer-footerLogo-loggedIn"></div></footer>
+    </div>
+</body>
